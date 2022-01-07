@@ -1,6 +1,6 @@
 package com.bitwisemc.org.setup;
 
-import net.minecraft.client.renderer.item.ItemProperties;
+import com.bitwisemc.org.core.AndGateBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -11,7 +11,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.jetbrains.annotations.NotNull;
 
 import static com.bitwisemc.org.BitwiseMC.MODID;
 
@@ -32,6 +31,8 @@ public class Registration {
     // Block and Item registrations
     public static final RegistryObject<Block> MYSTERIOUS_ORE_OVERWORLD = BLOCKS.register("mysterious_ore_overworld", () -> new Block(ORE_PROPERTIES));
     public static final RegistryObject<Item> MYSTERIOUS_ORE_OVERWORLD_ITEM = fromBlock(MYSTERIOUS_ORE_OVERWORLD);
+    public static final RegistryObject<Block> AND_GATE = BLOCKS.register("and_gate", () -> new AndGateBlock(BlockBehaviour.Properties.of(Material.DECORATION)));
+    public static final RegistryObject<Item> AND_GATE_ITEM = fromBlock(AND_GATE);
 
     public static <B extends Block> RegistryObject<Item> fromBlock(RegistryObject<B> block) {
         return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), ITEM_PROPERTIES));

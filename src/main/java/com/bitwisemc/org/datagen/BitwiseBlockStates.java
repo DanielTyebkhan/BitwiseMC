@@ -14,5 +14,6 @@ public class BitwiseBlockStates extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         simpleBlock(Registration.MYSTERIOUS_ORE_OVERWORLD.get());
+        simpleBlock(Registration.AND_GATE.get());
     }
 }
