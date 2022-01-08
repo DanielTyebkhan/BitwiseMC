@@ -1,6 +1,9 @@
 package com.bitwisemc.org.core;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DiodeBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -17,8 +20,24 @@ public class AndGateBlock extends DiodeBlock {
     }
 
     @Override
-    protected int getDelay(BlockState pState) {
+    protected boolean shouldTurnOn(Level pLevel, BlockPos pPos, BlockState pState) {
+        Direction dir = pState.getValue(FACING);
+        Direction counterClockWise = dir.getCounterClockWise();
+        Direction clockWise = dir.getClockWise();
+        int rightPower = getAlternateSignalAt(pLevel, pPos.relative(counterClockWise), counterClockWise);
+        int leftPower = getAlternateSignalAt(pLevel, pPos.relative(clockWise), clockWise);
+        System.out.println("LeftPower: " + leftPower + ", RightPower: " + rightPower);
+        return leftPower > 0 && rightPower > 0;
+    }
+
+    @Override
+    protected int getInputSignal(Level pLevel, BlockPos pPos, BlockState pState) {
         return 0;
+    }
+
+    @Override
+    protected int getDelay(BlockState pState) {
+        return 2;
     }
 
     @Override
