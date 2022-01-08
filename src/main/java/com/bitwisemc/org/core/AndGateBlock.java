@@ -31,6 +31,11 @@ public class AndGateBlock extends DiodeBlock {
     }
 
     @Override
+    protected int getOutputSignal(BlockGetter pLevel, BlockPos pPos, BlockState pState) {
+        return super.getOutputSignal(pLevel, pPos, pState);
+    }
+
+    @Override
     protected int getInputSignal(Level pLevel, BlockPos pPos, BlockState pState) {
         return 0;
     }
