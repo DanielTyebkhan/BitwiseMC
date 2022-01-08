@@ -39,6 +39,7 @@ public class BitwiseBlockStates extends BlockStateProvider {
         return models().getBuilder(location)
                 .texture("top", texture)
                 .texture("slab", blockTexture(Blocks.SMOOTH_STONE))
+                .texture("particle", mcLoc("block/stone"))
                 .element()
                 .from(0,0,0)
                 .to(16,2,16)

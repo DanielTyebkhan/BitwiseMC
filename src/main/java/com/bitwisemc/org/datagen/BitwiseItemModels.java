@@ -24,11 +24,5 @@ public class BitwiseItemModels extends ItemModelProvider {
         registerGateModel("and_gate");
         registerGateModel("not_gate");
         registerGateModel("xor_gate");
-//        registerGateModel(Registration.AND_GATE_ITEM.get());
-//        registerGateModel(Registration.EXCLUSIVE_OR_GATE_ITEM.get());
-//        registerGateModel(Registration.NOT_GATE_ITEM.get());
-//        withExistingParent(Registration.AND_GATE_ITEM.get().getRegistryName().getPath(), modLoc("block/and_gate")).texture("layer0");
-//        withExistingParent(Registration.EXCLUSIVE_OR_GATE_ITEM.get().getRegistryName().getPath(), modLoc("block/xor_gate"));
-//        withExistingParent(Registration.NOT_GATE_ITEM.get().getRegistryName().getPath(), modLoc("block/not_gate"));
     }
 }
