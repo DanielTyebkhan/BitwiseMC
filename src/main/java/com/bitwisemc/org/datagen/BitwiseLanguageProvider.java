@@ -18,5 +18,6 @@ public class BitwiseLanguageProvider extends LanguageProvider {
 
         add(Registration.AND_GATE.get(), "AND Gate");
         add(Registration.EXCLUSIVE_OR_GATE.get(), "XOR Gate");
+        add(Registration.NOT_GATE.get(), "NOT Gate");
     }
 }

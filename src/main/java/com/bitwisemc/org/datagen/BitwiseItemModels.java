@@ -15,6 +15,7 @@ public class BitwiseItemModels extends ItemModelProvider {
     @Override
     protected void registerModels() {
         withExistingParent(Registration.AND_GATE_ITEM.get().getRegistryName().getPath(), modLoc("block/and_gate"));
-        withExistingParent(Registration.EXCLUSIVE_OR_GATE_ITEM.get().getRegistryName().getPath(), modLoc("block/and_gate"));
+        withExistingParent(Registration.EXCLUSIVE_OR_GATE_ITEM.get().getRegistryName().getPath(), modLoc("block/xor_gate"));
+        withExistingParent(Registration.NOT_GATE_ITEM.get().getRegistryName().getPath(), modLoc("block/not_gate"));
     }
 }

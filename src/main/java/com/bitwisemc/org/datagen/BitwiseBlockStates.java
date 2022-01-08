@@ -22,6 +22,7 @@ public class BitwiseBlockStates extends BlockStateProvider {
     protected void registerStatesAndModels() {
         createGateBlock(Registration.AND_GATE.get());
         createGateBlock(Registration.EXCLUSIVE_OR_GATE.get());
+        createGateBlock(Registration.NOT_GATE.get());
     }
 
     private void addDiodeStates(Block block, ModelFile modelFile, boolean powered, Direction direction, int rotation) {

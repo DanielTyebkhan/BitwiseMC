@@ -2,6 +2,7 @@ package com.bitwisemc.org.setup;
 
 import com.bitwisemc.org.core.AndGateBlock;
 import com.bitwisemc.org.core.ExclusiveOrGateBlock;
+import com.bitwisemc.org.core.NotGateBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -33,6 +34,8 @@ public class Registration {
     public static final RegistryObject<Item> AND_GATE_ITEM = fromBlock(AND_GATE);
     public static final RegistryObject<Block> EXCLUSIVE_OR_GATE = BLOCKS.register("xor_gate", () -> new ExclusiveOrGateBlock(BlockBehaviour.Properties.of(Material.DECORATION)));
     public static final RegistryObject<Item> EXCLUSIVE_OR_GATE_ITEM = fromBlock(EXCLUSIVE_OR_GATE);
+    public static final RegistryObject<Block> NOT_GATE = BLOCKS.register("not_gate", () -> new NotGateBlock(BlockBehaviour.Properties.of(Material.DECORATION)));
+    public static final RegistryObject<Item> NOT_GATE_ITEM = fromBlock(NOT_GATE);
 
     public static <B extends Block> RegistryObject<Item> fromBlock(RegistryObject<B> block) {
         return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), ITEM_PROPERTIES));
