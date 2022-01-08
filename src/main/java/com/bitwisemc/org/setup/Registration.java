@@ -26,12 +26,9 @@ public class Registration {
     }
 
     // Base properties
-    public static final BlockBehaviour.Properties ORE_PROPERTIES = BlockBehaviour.Properties.of(Material.STONE).strength(2f);
     public static final Item.Properties ITEM_PROPERTIES = new Item.Properties().tab( ModSetup.ITEM_GROUP);
 
     // Block and Item registrations
-    public static final RegistryObject<Block> MYSTERIOUS_ORE_OVERWORLD = BLOCKS.register("mysterious_ore_overworld", () -> new Block(ORE_PROPERTIES));
-    public static final RegistryObject<Item> MYSTERIOUS_ORE_OVERWORLD_ITEM = fromBlock(MYSTERIOUS_ORE_OVERWORLD);
     public static final RegistryObject<Block> AND_GATE = BLOCKS.register("and_gate", () -> new AndGateBlock(BlockBehaviour.Properties.of(Material.DECORATION)));
     public static final RegistryObject<Item> AND_GATE_ITEM = fromBlock(AND_GATE);
     public static final RegistryObject<Block> EXCLUSIVE_OR_GATE = BLOCKS.register("xor_gate", () -> new ExclusiveOrGateBlock(BlockBehaviour.Properties.of(Material.DECORATION)));

@@ -17,7 +17,5 @@ public class BitwiseBlockTags extends BlockTagsProvider {
      */
     @Override
     protected void addTags() {
-        tag(BlockTags.MINEABLE_WITH_AXE)
-                .add(Registration.MYSTERIOUS_ORE_OVERWORLD.get());
     }
 }

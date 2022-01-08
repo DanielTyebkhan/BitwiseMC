@@ -13,8 +13,6 @@ public class DataGenerators {
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         if (event.includeServer()) {
-//            generator.addProvider(new BitwiseRecipes(generator));
-//            generator.addProvider((new BitwiseTables(generator)));
             BitwiseBlockTags blockTags = new BitwiseBlockTags(generator, event.getExistingFileHelper());
             generator.addProvider(blockTags);
             generator.addProvider(new BitwiseItemTags(generator, blockTags, event.getExistingFileHelper()));

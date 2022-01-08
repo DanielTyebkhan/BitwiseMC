@@ -15,8 +15,6 @@ public class BitwiseItemTags extends ItemTagsProvider {
 
     @Override
     protected void addTags() {
-        tag(Tags.Items.ORES)
-                .add(Registration.MYSTERIOUS_ORE_OVERWORLD_ITEM.get());
     }
 
     @Override

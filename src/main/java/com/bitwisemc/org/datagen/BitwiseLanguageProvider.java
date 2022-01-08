@@ -16,7 +16,7 @@ public class BitwiseLanguageProvider extends LanguageProvider {
     protected void addTranslations() {
         add("itemGroup." + TAB_NAME, "BitwiseMC");
 
-        add(Registration.MYSTERIOUS_ORE_OVERWORLD.get(), "Mysterious Ore");
-        add(Registration.AND_GATE.get(), "AND");
+        add(Registration.AND_GATE.get(), "AND Gate");
+        add(Registration.EXCLUSIVE_OR_GATE.get(), "XOR Gate");
     }
 }
