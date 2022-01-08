@@ -34,5 +34,5 @@ credits="" #optional
 authors="Daniel Tyebkhan" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-The BitwiseMC mod
+Adds binary gate blocks
 '''
